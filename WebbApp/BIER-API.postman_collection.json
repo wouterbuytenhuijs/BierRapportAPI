@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "8e3a838f-8e4d-4d6c-b75a-6697111481bd",
+		"name": "BIER-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Beer Image request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://wgbapp.azurewebsites.net/?lat=36.027778&lon=-5.593158",
+					"protocol": "http",
+					"host": [
+						"wgbapp",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "36.027778"
+						},
+						{
+							"key": "lon",
+							"value": "-5.593158"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Beer Image request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wgbapp.azurewebsites.net/?lat=36.027778&lon=-5.593158",
+							"protocol": "http",
+							"host": [
+								"wgbapp",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "36.027778"
+								},
+								{
+									"key": "lon",
+									"value": "-5.593158"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "private"
+						},
+						{
+							"key": "Content-Length",
+							"value": "208"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNetMvc-Version",
+							"value": "5.2"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 21 Jan 2019 12:10:10 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ImageUrl\": \"https://wgbstorage.blob.core.windows.net/mycontainer/MapImage36.027778,-5.593158.png\"\n}"
+				}
+			]
+		}
+	]
+}

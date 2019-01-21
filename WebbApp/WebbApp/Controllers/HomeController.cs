@@ -8,12 +8,11 @@ using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Queue;
 using WebbApp.Models;
 
-
-namespace WebApplication1.Controllers
+namespace WebbApp.Controllers
 {
     public class HomeController : Controller
     {
-        private static string StorageConnection => "MyStorageQuery";
+        private static string StorageConnection => "DefaultEndpointsProtocol=https;AccountName=wgbstorage;AccountKey=JhPkjwEfOGPwBKTQ8FCofQroA5+OkBrosPa8zM/jRuwbxl2PRjveoKnCQqXjrjTkLS4Lvd7FjbLHWyTVIi7xcg==;EndpointSuffix=core.windows.net";
         private static string BlobUrl => "https://wgbstorage.blob.core.windows.net/mycontainer/";
         public async Task<ActionResult> Index()
         {
@@ -31,11 +30,11 @@ namespace WebApplication1.Controllers
             }
             catch (Exception e)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.InternalServerError, "Can't write queue: " + e.ToString());
+                return new HttpStatusCodeResult(HttpStatusCode.InternalServerError, "Can't write queue: " + e);
             }
             string url = BlobUrl + $"MapImage{lat},{lon}.png";
             string json = new JavaScriptSerializer().Serialize(new ViewModel { ImageUrl = url });
-            return View(model: json);
+            return Content(json, "application/json");
         }
 
         private async Task MakeQueue(string lat, string lon)
